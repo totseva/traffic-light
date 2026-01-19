@@ -1,0 +1,145 @@
+ body {
+     font-family: sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f0f0f0;
+ }
+
+
+ header {
+     text-align: center;
+     margin-bottom: 40px;
+     padding: 10px 0;
+     border-bottom: 3px dashed #333;
+     background-color: #f0f0f0;
+     font-family: 'Arial Black', sans-serif;
+     letter-spacing: 2px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+
+
+ .content {
+     display: flex;
+     align-items: flex-start;
+     gap: 60px;
+ }
+
+ .game {
+     display: flex;
+ }
+
+ #controlPanel {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .button {
+     background-color: #555;
+     color: white;
+     border-radius: 12px;
+     padding: 20px 40px;
+     font-size: 18px;
+     font-weight: 700;
+     text-align: center;
+     margin: 55px;
+     cursor: pointer;
+     transition: transform 0.2s, background-color 0.2s;
+ }
+
+ .button:hover {
+     background-color: #777;
+     transform: translateY(-3px);
+ }
+
+ #traffic-light {
+     height: 500px;
+     width: 200px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-around;
+     background: linear-gradient(#222, #444);
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+     border-radius: 40px;
+     margin-left: 20px;
+     flex-shrink: 0;
+ }
+
+ .bulb {
+     height: 120px;
+     width: 120px;
+     background-color: #111;
+     border-radius: 50%;
+     box-shadow: 0 0 10px #000 inset;
+     margin: 20px 0;
+     transition: background-color 0.3s, box-shadow 0.3s;
+ }
+
+ .instructions h2 {
+     margin-top: 0;
+ }
+
+ .instructions p {
+     margin-bottom: 0;
+ }
+
+ .instructions {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: left;
+     max-width: 340px;
+     padding: 28px;
+     margin: 40px 100px;
+     background-color: #f8f8f8;
+     border-radius: 16px;
+     border: 1px solid #ddd;
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+     font-size: 15px;
+     line-height: 1.6;
+ }
+
+ footer {
+     padding: 12px 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-top: 2px solid #E8E8E8;
+     margin-top: 40px;
+ }
+
+
+ @media (max-width: 500px) {
+     .content {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     #controlPanel {
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: center;
+         margin: 20px 0;
+     }
+
+     .game {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .button {
+         margin: 10px;
+         padding: 16px 32px;
+         font-size: 16px;
+     }
+
+     #traffic-light {
+         margin-left: 0;
+         margin-bottom: 30px;
+     }
+
+     .instructions {
+         margin: 0 40px;
+         text-align: center;
+ }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Traffic Light Simulator</h1>
+    </header>
+
+    <div class="content">
+        <div class="game">
+            <div id="controlPanel">
+                <p id="stopButton" class="button">STOP</p>
+                <p id="cautionButton" class="button">READY...</p>
+                <p id="goButton" class="button">GO!</p>
+            </div>
+
+            <div id="traffic-light">
+                <div id="stopLight" class="bulb"></div>
+                <div id="cautionLight" class="bulb"></div>
+                <div id="goLight" class="bulb"></div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>Traffic Light Instructions</h2>
+            <p>Click the <b>STOP</b> button to turn on the red light.This signals that all movement should come to a
+                complete
+                stop.</p>
+            <p>Click the <b>READY...</b> button to activate the yellow light.This warns that the light is about to
+                change — slow
+                down and prepare.</p>
+            <p>Click the <b>GO!</b> button to switch on the green light.This means it is safe to move forward.</p>
+        </div>
+    </div>
+
+    <footer>© 2026 Traffic Light Simulator — Built by Marina Totseva</footer>
+</body>
+<script>
+    document.getElementById('stopButton').onclick = illuminateRed;
+    document.getElementById('cautionButton').onclick = illuminateYellow;
+    document.getElementById('goButton').onclick = illuminateGreen;
+
+    function illuminateRed() {
+        clearLights();
+        document.getElementById('stopLight').style.backgroundColor = "red";
+    }
+
+    function illuminateYellow() {
+        clearLights();
+        document.getElementById('cautionLight').style.backgroundColor = "yellow";
+    }
+
+    function illuminateGreen() {
+        clearLights();
+        document.getElementById('goLight').style.backgroundColor = "green";
+    }
+
+    function clearLights() {
+        document.getElementById('stopLight').style.backgroundColor = "black";
+        document.getElementById('cautionLight').style.backgroundColor = "black";
+        document.getElementById('goLight').style.backgroundColor = "black";
+    }
+</script>
+
+</html>
